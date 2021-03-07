@@ -13,6 +13,7 @@
 		51BB76D925EE7CBA00D4FD3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BB76D725EE7CBA00D4FD3D /* Main.storyboard */; };
 		51BB76DB25EE7CBB00D4FD3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BB76DA25EE7CBB00D4FD3D /* Assets.xcassets */; };
 		51BB76DE25EE7CBB00D4FD3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BB76DC25EE7CBB00D4FD3D /* LaunchScreen.storyboard */; };
+		51BB76F825F374DE00D4FD3D /* SecretListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB76F725F374DE00D4FD3D /* SecretListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		51BB76DA25EE7CBB00D4FD3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51BB76DD25EE7CBB00D4FD3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51BB76DF25EE7CBB00D4FD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51BB76F725F374DE00D4FD3D /* SecretListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				51BB76D325EE7CBA00D4FD3D /* SceneDelegate.swift */,
 				51BB76D525EE7CBA00D4FD3D /* ViewController.swift */,
 				51BB76D725EE7CBA00D4FD3D /* Main.storyboard */,
+				51BB76F725F374DE00D4FD3D /* SecretListViewController.swift */,
 				51BB76DA25EE7CBB00D4FD3D /* Assets.xcassets */,
 				51BB76DC25EE7CBB00D4FD3D /* LaunchScreen.storyboard */,
 				51BB76DF25EE7CBB00D4FD3D /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				51BB76D625EE7CBA00D4FD3D /* ViewController.swift in Sources */,
 				51BB76D225EE7CBA00D4FD3D /* AppDelegate.swift in Sources */,
+				51BB76F825F374DE00D4FD3D /* SecretListViewController.swift in Sources */,
 				51BB76D425EE7CBA00D4FD3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 import LocalAuthentication
 import UIKit
 
+
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -20,16 +21,14 @@ class ViewController: UIViewController {
     }
     
     @objc func didTapButton() {
-        print("aaa")
         let context = LAContext()
         var error: NSError? = nil
-        //NSError is created by objective-c  eg &error
+        //NSError is created by objective-c  → &error
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error){
             let reason = "please auth another"
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){ [weak self] success,error in
                 
                 DispatchQueue.main.async {
-                    print("bb")
                     guard success, error == nil else{
                         //error
                         print("error")
@@ -37,6 +36,8 @@ class ViewController: UIViewController {
                     }
                     //success
                     print("success")
+                    let slvc = SecretListViewController()
+                    self?.present(slvc, animated:  false, completion: nil)
                 }
                 
             }
