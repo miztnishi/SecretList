@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         view.addSubview(button)
         button.center = view.center
-        button.setTitle("Auth", for:.normal)
+        button.setTitle("認証", for:.normal)
         button.backgroundColor = .systemBlue
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
@@ -37,6 +37,8 @@ class ViewController: UIViewController {
                     //success
                     print("success")
                     let slvc = SecretListViewController()
+                    //遷移にfull screen表示
+                    slvc.modalPresentationStyle = .fullScreen
                     self?.present(slvc, animated:  false, completion: nil)
                 }
                 
