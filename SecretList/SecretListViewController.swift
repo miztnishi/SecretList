@@ -15,7 +15,7 @@ class SecretListViewController: UIViewController {
     var secretListView:UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.allowsSelection = false
+        //tableView.allowsSelection = false
         //addSubviewする前か
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
@@ -182,6 +182,8 @@ extension SecretListViewController:UITableViewDelegate,UITableViewDataSource {
         }
     }
     
+    
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let deleteAction = UIContextualAction(style: .destructive,
@@ -190,7 +192,7 @@ extension SecretListViewController:UITableViewDelegate,UITableViewDataSource {
                                                 
                                                 ConfirmAlert { isOk in
                                                     if isOk {
-                                                        SecretDBManager.sharedInstance.deleteOne(id: secretList![indexPath.row].id)
+                                                        SecretDBManager.sharedInstance.deleteOne(id: secretList![indexPath.section].id)
                                                         secretListView.reloadData()
                                                         completion(true)
                                                     }else{
@@ -211,7 +213,7 @@ extension SecretListViewController:UITableViewDelegate,UITableViewDataSource {
         alert.view.backgroundColor = UIColor.lightGray
         alert.view.layer.cornerRadius = 25
         let OkALert = UIAlertAction(title: "OK", style: .default) { action in
-             handler(true)
+            handler(true)
         }
         let NoALert = UIAlertAction(title: "Cancel", style: .cancel) { action in
             handler(false)
